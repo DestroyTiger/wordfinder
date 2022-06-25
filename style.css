@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "YekanBakhBold";
+    src: url(Font/YekanBakhBold.woff);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    background-color: #dedede;
+    font-family: YekanBakhBold;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.disc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.description {
+    display: block;
+    text-align: justify;
+    border-radius: 10px;
+    background: #dedede;
+    box-shadow: 5px 5px 10px #bdbdbd,
+        -5px -5px 10px #ffffff;
+    border-color: transparent;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-decoration: rtl;
+    padding: 10px;
+    /* max-width: 70%; */
+    width: 80%;
+
+
+}
+
+.word-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: center;
+    width: 90%;
+
+
+}
+
+.input-word {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: #dedede;
+    box-shadow: 3px 3px 10px #bdbdbd,
+        -3px -3px 10px #ffffff;
+    border-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    font-family: YekanBakhBold;
+
+}
+
+
+.answerfinalbox {
+    width: 80%;
+    height: 150px;
+    border-radius: 10px;
+    background: #dedede;
+    box-shadow: 3px 3px 10px #bdbdbd,
+        -3px -3px 10px #ffffff;
+    border-color: transparent;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-word::placeholder {
+    opacity: .5;
+}
+
+.input-word-active {
+    background-color: #eaeaea;
+    box-shadow: 5px 5px 10px #bdbdbd,
+        -5px -5px 10px #ffffff;
+}
+
+.input-word:focus {
+
+    outline: none;
+}
+
+
+
+
+
+@media (max-width:810px) {
+
+    .input-word {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: .8rem;
+    }
+
+    .input-word::placeholder {
+        font-size: .8rem;
+
+    }
+}
+@media (max-width:576px) {
+    .description {
+        font-size: .8rem;
+        width: 95%;
+
+    }
+
+    .answerfinalbox {
+        font-size: .8rem;
+        width: 70%;
+        height: 60px;
+    }
+
+    .input-word {
+        width: 70px !important;
+        height: 70px !important;
+        font-size: .8rem;
+    }
+
+    .input-word::placeholder {
+        font-size: .8rem;
+
+    }
+}
+@media (max-width:370px) {
+
+    .input-word {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: .8rem;
+    }
+
+    .input-word::placeholder {
+        font-size: .8rem;
+
+    }
+}
