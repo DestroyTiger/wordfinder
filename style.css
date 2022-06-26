@@ -87,6 +87,32 @@ body {
 
 }
 
+.input-word-mobile {
+    display: block;
+
+    border-radius: 10px;
+    background: #dedede;
+    box-shadow: 3px 3px 10px #bdbdbd,
+        -3px -3px 10px #ffffff;
+    border-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    font-family: YekanBakhBold;
+    width: 80%;
+}
+
+.input-word-mobile:focus {
+    text-align: center;
+    outline: none;
+}
+
+.word-list-mobile {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .answerfinalbox {
     width: 80%;
@@ -137,10 +163,12 @@ body {
 
     }
 }
+
 @media (max-width:576px) {
     .description {
         font-size: .8rem;
         width: 95%;
+        margin-bottom: 20px;
 
     }
 
@@ -160,7 +188,13 @@ body {
         font-size: .8rem;
 
     }
+
+    .input-word-mobile {
+        font-size: 1.9rem;
+
+    }
 }
+
 @media (max-width:370px) {
 
     .input-word {
@@ -171,6 +205,10 @@ body {
 
     .input-word::placeholder {
         font-size: .8rem;
+
+    }
+    .input-word-mobile {
+        font-size: 1.2rem;
 
     }
 }
