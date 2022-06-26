@@ -84,6 +84,8 @@ body {
     text-align: center;
     font-size: 3rem;
     font-family: YekanBakhBold;
+    overflow: hidden;
+
 
 }
 
@@ -99,6 +101,8 @@ body {
     font-size: 3rem;
     font-family: YekanBakhBold;
     width: 80%;
+    overflow: hidden;
+
 }
 
 .input-word-mobile:focus {
@@ -129,6 +133,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
 }
 
 .input-word::placeholder {
