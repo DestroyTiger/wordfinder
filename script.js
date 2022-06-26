@@ -148,9 +148,10 @@ function answerfinal() {
         if (chistan[randomchistan].answer === InputeActivemobile.value) {
             answerfinalbox.innerText = "درست حدس زدید"
             travelcount++;
-            if (travelcount === 10)
+            if (travelcount === 10){
+            InputeActivemobile.value
                 location.reload();
-
+            }
         }
     }
 
