@@ -1,6 +1,8 @@
 const InputeActive = document.querySelector(".input-word-active");
-const answerfinalh2 = document.getElementById("answerfinal");
 const wordlist = document.querySelector(".word-list");
+const InputeActivemobile = document.querySelector(".input-word-mobile");
+const wordlistmobile = document.querySelector(".word-list-mobile");
+const answerfinalh2 = document.getElementById("answerfinal");
 const answerfinalbox = document.querySelector(".answerfinalbox");
 const description = document.querySelector(".description");
 
@@ -41,7 +43,14 @@ let randomchistan = Math.floor(Math.random() * chistan.length);
 description.innerText = chistan[randomchistan].description;
 console.log(chistan[randomchistan].answer);
 let answercount = 0;
+InputeActivemobile.maxLength = chistan[randomchistan].answer.length;
+
 for (let i of chistan[randomchistan].answer) {
+    InputeActivemobile.placeholder += "-";
+    InputeActivemobile.addEventListener("keyup", () => {
+
+
+    });
     const inputwordcreater = document.createElement("input");
     if (answercount === 0) {
         inputwordcreater.classList = "input-word input-word-active";
@@ -64,18 +73,22 @@ for (let i of chistan[randomchistan].answer) {
     // console.log(inputwordcreater);
 }
 const InputWord = document.querySelectorAll(".input-word");
-description.style.width=wordlist.style.width-50;
+description.style.width = wordlist.style.width - 50;
 
 if (chistan[randomchistan].answer.length > 7) {
     InputWord.forEach((items, index) => {
-        items.style.width="110px";
-        items.style.height="110px";
-        
+        items.style.width = "110px";
+        items.style.height = "110px";
+
 
     });
 }
 let answerbox = [];
 let conte = 0;
+if (/Mobi/i.test(navigator.userAgent)) {
+    wordlistmobile.style.display = "flex";
+    wordlist.style.display = "none";
+}
 InputWord.forEach((items, index) => {
 
 
@@ -129,6 +142,16 @@ function answerfinal() {
         if (travelcount === 10)
             location.reload();
 
+    }
+    if (/Mobi/i.test(navigator.userAgent)) {
+        answerfinalh2.innerText = InputeActivemobile.value;
+        if (chistan[randomchistan].answer === InputeActivemobile.value) {
+            answerfinalbox.innerText = "درست حدس زدید"
+            travelcount++;
+            if (travelcount === 10)
+                location.reload();
+
+        }
     }
 
 }
