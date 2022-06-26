@@ -149,7 +149,7 @@ function answerfinal() {
             answerfinalbox.innerText = "درست حدس زدید"
             travelcount++;
             if (travelcount === 10){
-            InputeActivemobile.value
+            InputeActivemobile.value="";
                 location.reload();
             }
         }
