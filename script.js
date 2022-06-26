@@ -80,10 +80,11 @@ InputWord.forEach((items, index) => {
 
 
     items.addEventListener("keyup", function (event) {
-        alert(event.keyCode);
+        // alert(event.keyCode);
+        // alert(String.fromCharCode(229));
         if (event.key >= 0 & event.key <= 9)
             items.value = "";
-        if (event.keyCode >= 65 & event.keyCode <= 90 | event.keyCode === 188 | event.keyCode === 186 | event.keyCode === 222 | event.keyCode === 219 | event.keyCode === 221 | event.keyCode === 32 | event.keyCode === 220 | event.keyCode === 0) {
+        if (event.keyCode >= 65 & event.keyCode <= 90 | event.keyCode === 188 | event.keyCode === 186 | event.keyCode === 222 | event.keyCode === 219 | event.keyCode === 221 | event.keyCode === 32 | event.keyCode === 220 | event.keyCode === 229) {
 
             if (index < InputWord.length - 1) {
                 items.nextElementSibling.classList.add("input-word-active");
