@@ -220,16 +220,18 @@ function answerfinal() {
 
 }
 if (/Mobi/i.test(navigator.userAgent)) {
-  setInterval(mobileAnswer,10);
+  setInterval(mobileAnswer, 10);
+  let counter = 0;
   function mobileAnswer() {
     answerfinalh2.innerText = InputeActivemobile.value;
     if (chistan[randomchistan].answer === InputeActivemobile.value) {
       answerfinalh2.innerText = "درست است";
-
-      setTimeout(() => { location.reload() }, 500);
+      counter++;
+      if (counter == 50)
+        location.reload();
 
     }
-    else if((InputeActivemobile.value.length===chistan[randomchistan].answer.length )&& (InputeActivemobile.value!==chistan[randomchistan].answer) ){
+    else if ((InputeActivemobile.value.length === chistan[randomchistan].answer.length) && (InputeActivemobile.value !== chistan[randomchistan].answer)) {
       answerfinalh2.innerText = "اشتباه است"
     }
   }
