@@ -126,7 +126,7 @@ InputeActivemobile.maxLength = chistan[randomchistan].answer.length;
 
 for (let i of chistan[randomchistan].answer) {
   InputeActivemobile.placeholder += "-";
-  InputeActivemobile.addEventListener("keyup", () => {});
+  InputeActivemobile.addEventListener("keyup", () => { });
   const inputwordcreater = document.createElement("input");
   if (answercount === 0) {
     inputwordcreater.classList = "input-word input-word-active";
@@ -200,8 +200,8 @@ InputWord.forEach((items, index) => {
     answerboxrevers = String(answerbox).replaceAll(",", "");
     answerfinalh2.innerText = answerboxrevers;
 
-    if(answerfinalh2.innerText.length===chistan[randomchistan].answer.length)
-    answerfinal();
+    if (answerfinalh2.innerText.length === chistan[randomchistan].answer.length)
+      answerfinal();
   });
 
   items.addEventListener("mouseup", () => (items.disabled = false));
@@ -211,22 +211,27 @@ function answerfinal() {
 
   if (chistan[randomchistan].answer === answerboxrevers) {
     answerfinalh2.innerText = "درست است";
-    setTimeout(()=>{location.reload()},500);
+    setTimeout(() => { location.reload() }, 500);
 
   }
-  else{
-    answerfinalh2.innerText="اشتباه است"
+  else {
+    answerfinalh2.innerText = "اشتباه است"
   }
-  if (/Mobi/i.test(navigator.userAgent)) {
+
+}
+if (/Mobi/i.test(navigator.userAgent)) {
+  setInterval(mobileAnswer,10);
+  function mobileAnswer() {
     answerfinalh2.innerText = InputeActivemobile.value;
     if (chistan[randomchistan].answer === InputeActivemobile.value) {
       answerfinalh2.innerText = "درست است";
 
-      setTimeout(()=>{location.reload()},500);
+      setTimeout(() => { location.reload() }, 500);
 
     }
-    else{
-        answerfinalh2.innerText="اشتباه است"
+    else if((InputeActivemobile.value.length===chistan[randomchistan].answer.length )&& (InputeActivemobile.value!==chistan[randomchistan].answer) ){
+      answerfinalh2.innerText = "اشتباه است"
     }
   }
 }
+
